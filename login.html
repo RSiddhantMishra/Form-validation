@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 200px;
+  padding: 8px 10px;
+  margin: 8px 150px;
+  margin-left: 30px;
+  display: inline-block;
+  border: 2px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+padding: 16px;
+border: 1px solid green;
+margin: 80px 8px;
+width: 600px;
+}
+
+
+</style>
+<script>
+function validateForm() {
+  var fn = document.forms["myForm"]["fname"].value;
+var ln = document.forms["myForm"]["lname"].value;
+var em = document.forms["myForm"]["email"].value;
+var ps = document.forms["myForm"]["psw"].value;
+  if (fn == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+if (ln == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+if (em == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+if (ps == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<center>
+<div class="container">
+
+<h4 style="background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 6px 0;
+margin-left:-16px;
+margin-top:-16px;
+width: 599px;">Get start Today!</h4><br>
+  <div class="row">
+    <div class="col-sm-6">
+    <label for="fname" style="margin-left:-125px"><b>First name</b></label>
+      <input type="text" placeholder="Enter First name" name="fname" >
+<label for="email" style="margin-left:-100px"><b>Email address</b></label>
+      <input type="email" placeholder="Enter Email" name="email" >
+
+</div>
+<div class="col-sm-4">
+<label for="lname" style="margin-left:-30px"><b>Last name</b></label>
+      <input type="text" placeholder="Enter Last name" name="lname" >
+      
+      <label for="psw" style="margin-left:-30px"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" >
+      </div>
+<button type="submit"><h4>Claim your Free trial</h4></button>
+  </div>
+<h6> You are agreeing to our </><a href="#">Terms and Services</a></h6>
+</div>
+</center>
+</body>
+</html>
